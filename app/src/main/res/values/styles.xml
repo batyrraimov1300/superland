@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Widget.Theme.Superland.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/my_color</item>
+    </style>
+
+    <style name="Widget.Theme.Superland.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/my_color</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>
