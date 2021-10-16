@@ -1,6 +1,5 @@
 package com.example.superland.Adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,21 +9,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.superland.Categories.PizzaActivity;
 import com.example.superland.Domain.CategoryDomain;
+import com.example.superland.MainFragment;
+import com.example.superland.MainFragmentDirections;
 import com.example.superland.R;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
-    public CategoryAdapter( ArrayList<CategoryDomain> categoryDomains) {
+    public CategoryAdapter(MainFragment.ClickListener clickListener, ArrayList<CategoryDomain> categoryDomains) {
         this.categoryDomains = categoryDomains;
+        this.clickListener = clickListener;
     }
 
+    MainFragment.ClickListener clickListener;
     ArrayList<CategoryDomain> categoryDomains;
 
     @NonNull
@@ -38,13 +43,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.categoryName.setText(categoryDomains.get(position).getTitle());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(holder.itemView.getContext(), PizzaActivity.class);
-                holder.itemView.getContext().startActivity(intent);
-            }
-        });
+        holder.itemView.setOnClickListener(
+                view -> clickListener.click(categoryDomains.get(position))
+        );
+
+//        holder.itemView.setOnClickListener(view -> {
+//            NavDirections action = MainFragmentDirections.startPizzaFragment();
+//            Navigation.findNavController(view).navigate(action);
+//        });
 
         String picUrl = "";
         switch (position) {
