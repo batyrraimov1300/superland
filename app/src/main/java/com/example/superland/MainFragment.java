@@ -19,6 +19,7 @@ import com.example.superland.Adapter.PopularAdapter;
 import com.example.superland.Adapter.SliderAdapter;
 import com.example.superland.Domain.CategoryDomain;
 import com.example.superland.Domain.FoodDomain;
+import com.example.superland.Interfaces.ItemClickListener;
 import com.example.superland.databinding.FragmentMainBinding;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -31,7 +32,6 @@ public class MainFragment extends Fragment {
     private FragmentMainBinding binding;
 
     private RecyclerView.Adapter adapter, adapter2;
-    private RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
 
 
     SliderView sliderView;
@@ -74,13 +74,14 @@ public class MainFragment extends Fragment {
     private void recyclerViewPopular() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext(),
                 LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewPopularList = binding.recyclerViewPopular;
+        RecyclerView recyclerViewPopularList = binding.recyclerViewPopular;
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
         ArrayList<FoodDomain> foodlist = new ArrayList<>();
-        foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "", 460.00));
-        foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "", 460.00));
+        foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "Состав: Пепперони, болгарский перец, \n" +
+                "моцарелла, томатный соус. ", 460.00));
+        foodlist.add(new FoodDomain("Сырная", "cheese_pizza", "", 460.00));
         foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "", 460.00));
 
         adapter2 = new PopularAdapter(foodlist);
@@ -91,13 +92,13 @@ public class MainFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext(),
                 LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewCategoryList = binding.recyclerView;
+        RecyclerView recyclerViewCategoryList = binding.recyclerView;
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
         ArrayList<CategoryDomain> categoryList = new ArrayList<>();
-        categoryList.add(new CategoryDomain("Пицца", "button_pizza"));
         categoryList.add(new CategoryDomain("Аниматоры", "button_animators"));
         categoryList.add(new CategoryDomain("Торт", "button_cakes"));
+        categoryList.add(new CategoryDomain("Пицца", "button_pizza"));
         categoryList.add(new CategoryDomain("Бургеры", "button_burgers"));
         adapter = new CategoryAdapter(new ClickListener(), categoryList);
         recyclerViewCategoryList.setAdapter(adapter);
@@ -107,30 +108,43 @@ public class MainFragment extends Fragment {
 
         @Override
         public void click(CategoryDomain item) {
-
-            /*Положить нужный объект в переход*/
-            MainFragmentDirections.StartPizzaFragment action = MainFragmentDirections.startPizzaFragment();
-            action.setTestArg(item.getTitle());
-            NavHostFragment.findNavController(MainFragment.this).navigate(action);
+//
+//            /*Положить нужный объект в переход*/
+//            MainFragmentDirections.StartPizzaFragment action = MainFragmentDirections.startPizzaFragment();
+//            action.setTestArg(item.getTitle());
+//            NavHostFragment.findNavController(MainFragment.this).navigate(action);
 
             /*Выбирать куда хочешь перейти*/
-//            switch (item.getPic()) {
-//                case "button_pizza": {
-//                    MainFragmentDirections.StartPizzaFragment action = MainFragmentDirections.startPizzaFragment();
-//                    action.setTestArg(item.getTitle());
-//                    NavHostFragment.findNavController(MainFragment.this).navigate(action);
-//                    break;
-//                }
-//                case "button_animators": {
-//
-//                }
-//                case "button_cakes": {
-//
-//                }
-//                case "button_burgers": {
-//
-//                }
-//            }
+            switch (item.getPic()) {
+                case "button_animators": {
+                    MainFragmentDirections.StartAnimatorsFragment action = MainFragmentDirections.startAnimatorsFragment();
+                    action.setTestArg(item.getTitle());
+                    NavHostFragment.findNavController(MainFragment.this).navigate((NavDirections) action);
+                    break;
+                }
+                case "button_cakes": {
+                    MainFragmentDirections.StartCakeFragment action = MainFragmentDirections.startCakeFragment();
+                    action.setTestArg(item.getTitle());
+                    NavHostFragment.findNavController(MainFragment.this).navigate((NavDirections) action);
+                    break;
+
+                }
+
+                case "button_pizza": {
+                    MainFragmentDirections.StartPizzaFragment action = MainFragmentDirections.startPizzaFragment();
+                    action.setTestArg(item.getTitle());
+                    NavHostFragment.findNavController(MainFragment.this).navigate((NavDirections) action);
+                    break;
+
+                }
+
+                case "button_burgers": {
+                    MainFragmentDirections.StartBurgerFragment action = MainFragmentDirections.startBurgerFragment();
+                    action.setTestArg(item.getTitle());
+                    NavHostFragment.findNavController(MainFragment.this).navigate((NavDirections) action);
+                    break;
+                }
+            }
         }
     }
 }

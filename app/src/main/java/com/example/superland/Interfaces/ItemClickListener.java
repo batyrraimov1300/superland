@@ -1,4 +1,4 @@
-package com.example.superland;
+package com.example.superland.Interfaces;
 
 public interface ItemClickListener<T> {
 

@@ -23,4 +23,10 @@
         <item name="fullscreenBackgroundColor">@color/my_color</item>
         <item name="fullscreenTextColor">@color/my_color</item>
     </style>
+    <style name="Theme.Superland.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Superland.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Superland.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

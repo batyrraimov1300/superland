@@ -1,7 +1,5 @@
 package com.example.superland.Domain;
 
-import android.app.Activity;
-
 public class CategoryDomain {
     private String title;
 

@@ -1,4 +1,4 @@
-package com.example.superland;
+package com.example.superland.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

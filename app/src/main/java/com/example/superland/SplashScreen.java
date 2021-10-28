@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.superland.Activity.MainActivity;
 
 public class SplashScreen extends Activity {
 

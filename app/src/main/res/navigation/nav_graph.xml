@@ -10,6 +10,7 @@
         android:name="com.example.superland.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
+
         <action
             android:id="@+id/startPizzaFragment"
             app:destination="@id/pizzaFragment" >
@@ -18,10 +19,63 @@
                 android:defaultValue="default"
                 app:argType="string" />
         </action>
+
+        <action
+            android:id="@+id/startAnimatorsFragment"
+            app:destination="@id/animatorsFragment" >
+            <argument
+                android:name="testArg"
+                android:defaultValue="default"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/startCakeFragment"
+            app:destination="@id/cakeFragment">
+            <argument
+                android:name="testArg"
+                android:defaultValue="default"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/startBurgerFragment"
+            app:destination="@id/burgerFragment">
+            <argument
+                android:name="testArg"
+                android:defaultValue="default"
+                app:argType="string" />
+        </action>
+
     </fragment>
+
+    <fragment
+        android:id="@+id/animatorsFragment"
+        android:name="com.example.superland.Categories.AnimatorsFragment"
+        android:label="fragment_animators"
+        tools:layout="@layout/fragment_animators"/>
+
+
+    <fragment
+        android:id="@+id/cakeFragment"
+        android:name="com.example.superland.Categories.CakeFragment"
+        android:label="fragment_cake"
+        tools:layout="@layout/fragment_cake"/>
+
+
     <fragment
         android:id="@+id/pizzaFragment"
         android:name="com.example.superland.Categories.PizzaFragment"
         android:label="fragment_pizza"
         tools:layout="@layout/fragment_pizza"/>
+
+    <fragment
+        android:id="@+id/burgerFragment"
+        android:name="com.example.superland.Categories.BurgerFragment"
+        android:label="fragment_burger"
+        tools:layout="@layout/fragment_burger"/>
+
+
+
+
 </navigation>

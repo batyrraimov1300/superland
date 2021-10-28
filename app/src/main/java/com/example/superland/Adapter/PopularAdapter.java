@@ -1,5 +1,6 @@
 package com.example.superland.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.superland.Domain.FoodDomain;
 import com.example.superland.R;
-import com.example.superland.ShowDetailActivity;
+import com.example.superland.Activity.ShowDetailActivity;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         this.foodDomains = FoodDomains;
     }
 
-    @NonNull
+    @NonNull        
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular, parent, false);
@@ -35,7 +35,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(foodDomains.get(position).getTitle());
         holder.fee.setText(String.valueOf(foodDomains.get(position).getFee()));
 
@@ -49,13 +49,10 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
                 .load(drawableResourceId)
                 .into(holder.popular_pic);
 
-        holder.add_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
-                intent.putExtra("object",foodDomains.get(position));
-                holder.itemView.getContext().startActivity(intent);
-            }
+        holder.add_button.setOnClickListener(view -> {
+            Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+            intent.putExtra("object",foodDomains.get(position));
+            holder.itemView.getContext().startActivity(intent);
         });
 
     }
