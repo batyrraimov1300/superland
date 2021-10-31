@@ -45,8 +45,6 @@ public class PizzaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewPizza();
-
-
         Button back_home = view.findViewById(R.id.back_home);
         back_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +54,6 @@ public class PizzaFragment extends Fragment {
             }
         });
         getBundle();
-
     }
 
     private void getBundle() {
@@ -77,7 +74,7 @@ public class PizzaFragment extends Fragment {
         RecyclerView recyclerPizza = binding.recyclerPizza;
         recyclerPizza.setLayoutManager(linearLayoutManager);
         ArrayList<PizzaDomain> pizzaList = new ArrayList<>();
-        pizzaList.add(new PizzaDomain("Пепперони", "", "Описание пепперони", "460 ₽", "30 см"));
+        pizzaList.add(new PizzaDomain("Пепперони", "pepperoni_one", "Описание пепперони", "460 ₽", "30 см"));
         pizzaList.add(new PizzaDomain("Сырная", "", "Описание сырной", "460 ₽", "30 см"));
         pizzaList.add(new PizzaDomain("Карбонаро", "", "Описание карбонары", "460 ₽", "30 см"));
         pizzaList.add(new PizzaDomain("Поло", "", "Описание полы", "460 ₽", "30 см"));
@@ -95,7 +92,6 @@ public class PizzaFragment extends Fragment {
             switch (item.getPic()) {
                 case "pepperoni_one": {
                 }
-
                 case "cheese_pizza": {
 
                 }
