@@ -19,11 +19,11 @@
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:id="@+id/basket_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="355dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/ic_outline_shopping_cart_24" />
 
     <TextView
@@ -32,13 +32,15 @@
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:letterSpacing="0.10"
+        android:gravity="fill"
         android:text="Пицца"
         android:textAlignment="center"
         android:textColor="#486AB9"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
 
 
     <LinearLayout
