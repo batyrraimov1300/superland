@@ -24,7 +24,7 @@ public class CartActivity extends AppCompatActivity {
     private TextView totalFeeTxt, deliveryTxt, totalTxt, emptyTxt;
     private ScrollView scrollView;
 
-    Button back_button;
+    private Button back_button;
     Button check_out;
 
     @Override
@@ -43,7 +43,7 @@ public class CartActivity extends AppCompatActivity {
         });
 
 
-        back_button = (Button) findViewById(R.id.back_button_in_cart);
+        back_button = (Button) findViewById(R.id.back_detail);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

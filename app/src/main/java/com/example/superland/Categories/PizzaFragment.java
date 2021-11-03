@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.superland.Activity.CartActivity;
 import com.example.superland.Activity.MainActivity;
 import com.example.superland.Adapter.PizzaAdapter;
 import com.example.superland.Domain.FoodDomain;
@@ -45,6 +46,17 @@ public class PizzaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewPizza();
+
+        ImageView basket_btn = view.findViewById(R.id.basket_btn);
+        basket_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         Button back_home = view.findViewById(R.id.back_home);
         back_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +105,6 @@ public class PizzaFragment extends Fragment {
                 case "pepperoni_one": {
                 }
                 case "cheese_pizza": {
-
                 }
 
             }

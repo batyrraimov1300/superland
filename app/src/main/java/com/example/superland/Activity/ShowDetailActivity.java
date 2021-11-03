@@ -24,7 +24,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     private int numberOrder = 1;
     private ManagementCart managementCart;
 
-    Button back_button;
+    private Button back_button;
     public ImageView basket_button;
 
     @Override
@@ -59,8 +59,9 @@ public class ShowDetailActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void getBundle() {
         object = (FoodDomain) getIntent().getSerializableExtra("object");
-        int drawableResourceId;
-        drawableResourceId = this.getResources().getIdentifier(object.getPic(),"drawable",this.getPackageName());
+        int drawableResourceId = this.getResources().getIdentifier(object.getPic(),
+                "drawable",
+                this.getPackageName());
 
         Glide.with(this)
                 .load(drawableResourceId)

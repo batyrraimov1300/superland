@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:elevation="25dp"
+    android:orientation="vertical"
     tools:context=".Activity.CartActivity">
 
     <Button
-        android:id="@+id/back_button_in_cart"
+        android:id="@+id/back_detail"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="15dp"

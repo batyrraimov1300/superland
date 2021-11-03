@@ -80,9 +80,9 @@ public class MainFragment extends Fragment {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
         ArrayList<FoodDomain> foodlist = new ArrayList<>();
         foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "Состав: Пепперони, болгарский перец, \n" +
-                "моцарелла, томатный соус. ", 460.00));
-        foodlist.add(new FoodDomain("Сырная", "cheese_pizza", "", 460.00));
-        foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "", 460.00));
+                "моцарелла, томатный соус. ", 460));
+        foodlist.add(new FoodDomain("Сырная", "cheese_pizza", "", 460));
+        foodlist.add(new FoodDomain("Пепперони", "pepperoni_one", "", 460));
 
         adapter2 = new PopularAdapter(foodlist);
         recyclerViewPopularList.setAdapter(adapter2);
@@ -108,12 +108,6 @@ public class MainFragment extends Fragment {
 
         @Override
         public void click(CategoryDomain item) {
-//
-//            /*Положить нужный объект в переход*/
-//            MainFragmentDirections.StartPizzaFragment action = MainFragmentDirections.startPizzaFragment();
-//            action.setTestArg(item.getTitle());
-//            NavHostFragment.findNavController(MainFragment.this).navigate(action);
-
             /*Выбирать куда хочешь перейти*/
             switch (item.getPic()) {
                 case "button_animators": {
