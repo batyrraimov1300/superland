@@ -14,12 +14,22 @@ import android.widget.TextView;
 import com.example.superland.R;
 
 public class CheckOut extends AppCompatActivity {
+    private EditText user_name, user_number, user_address;
     private Button back_home;
+    private Button order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_out);
+
+        order = (Button) findViewById(R.id.order);
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
         back_home = (Button) findViewById(R.id.back_home);
         back_home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,8 +39,12 @@ public class CheckOut extends AppCompatActivity {
             }
         });
 
-
-
-
+        init();
     }
+    public void init(){
+        user_name = findViewById(R.id.user_name);
+        user_number = findViewById(R.id.user_number);
+        user_address = findViewById(R.id.user_address);
+    }
+
 }
