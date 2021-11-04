@@ -99,11 +99,13 @@
         <Button
             android:id="@+id/order"
             android:layout_width="250dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="50dp"
-            android:elevation="15dp"
+            android:background="@drawable/bg_button"
+            android:elevation="20dp"
             android:text="Заказать"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             app:cornerRadius="20dp"
             tools:cornerRadius="20dp" />
     </LinearLayout>

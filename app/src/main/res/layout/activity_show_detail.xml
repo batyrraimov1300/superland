@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.ShowDetailActivity">
@@ -104,16 +103,18 @@
             <Button
                 android:id="@+id/add_to_backet"
                 android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bg_button"
                 android:backgroundTint="#486AB9"
+                android:elevation="20dp"
                 android:text="@string/add_to_basket"
                 android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:textSize="15sp"
-                android:textStyle="normal"
-                app:cornerRadius="20dp" />
+                android:textStyle="normal" />
 
         </LinearLayout>
     </ScrollView>

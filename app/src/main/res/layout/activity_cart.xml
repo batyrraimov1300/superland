@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Activity.CartActivity">
 
     <Button
@@ -164,16 +163,16 @@
             <Button
                 android:id="@+id/check_out"
                 android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="73dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="25dp"
+                android:background="@drawable/bg_button"
                 android:elevation="10dp"
                 android:text="Оформить"
                 android:textAllCaps="false"
-                android:textSize="15sp"
-                app:cornerRadius="20dp"
-                tools:cornerRadius="10dp" />
+                android:textColor="@color/white"
+                android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 

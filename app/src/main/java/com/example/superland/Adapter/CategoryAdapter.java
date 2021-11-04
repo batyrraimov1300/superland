@@ -55,23 +55,23 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         String picUrl = "";
         switch (position) {
             case 0: {
-                picUrl = "animators_picture";
-                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.button_pizza));
+                picUrl = "ic_animator";
+                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.bg_category));
                 break;
             }
             case 1: {
-                picUrl = "cake_one";
-                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.button_animators));
+                picUrl = "ic_cake";
+                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.bg_category));
                 break;
             }
             case 2: {
-                picUrl = "pizza_one";
-                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.button_cakes));
+                picUrl = "ic_pizza";
+                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.bg_category));
                 break;
             }
             case 3: {
-                picUrl = "hamburger";
-                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.button_burgers));
+                picUrl = "ic_gamburger";
+                holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.bg_category));
                 break;
             }
         }

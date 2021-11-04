@@ -34,8 +34,7 @@ public class FoodDomain implements Serializable {
     }
 
     public String getPic() {
-        String pic = this.pic;
-        return pic;
+        return this.pic;
     }
 
     public void setPic(String pic) {
