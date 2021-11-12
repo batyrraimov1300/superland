@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "743475482280",
+    "firebase_url": "https://superland-df621-default-rtdb.firebaseio.com",
+    "project_id": "superland-df621",
+    "storage_bucket": "superland-df621.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743475482280:android:998eddde4453bf358efc9d",
+        "android_client_info": {
+          "package_name": "com.example.adminsuperland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743475482280-0hcfjqgoa1v6lc1ledvl7011pf5l51jj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCGxnY5__hcF5e1h1mKraK-N6reZ53bhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743475482280-0hcfjqgoa1v6lc1ledvl7011pf5l51jj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743475482280:android:63a7a863a02c0cde8efc9d",
+        "android_client_info": {
+          "package_name": "com.example.superland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743475482280-0hcfjqgoa1v6lc1ledvl7011pf5l51jj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCGxnY5__hcF5e1h1mKraK-N6reZ53bhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743475482280-0hcfjqgoa1v6lc1ledvl7011pf5l51jj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

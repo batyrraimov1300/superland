@@ -1,6 +1,9 @@
 package com.example.superland;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,10 +12,6 @@ import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.superland.Adapter.CategoryAdapter;
 import com.example.superland.Adapter.PopularAdapter;
@@ -62,7 +61,6 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewCategory();
         recyclerViewPopular();
-
         sliderView = binding.imageSlider;
         SliderAdapter sliderAdapter = new SliderAdapter(images);
         sliderView.setSliderAdapter(sliderAdapter);
@@ -113,7 +111,7 @@ public class MainFragment extends Fragment {
                 case "button_animators": {
                     MainFragmentDirections.StartAnimatorsFragment action = MainFragmentDirections.startAnimatorsFragment();
                     action.setTestArg(item.getTitle());
-                    NavHostFragment.findNavController(MainFragment.this).navigate((NavDirections) action);
+                    NavHostFragment.findNavController(MainFragment.this).navigate(action);
                     break;
                 }
                 case "button_cakes": {

@@ -2,6 +2,11 @@ package com.example.superland.Categories;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,18 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-
 import com.example.superland.Activity.CartActivity;
 import com.example.superland.Activity.MainActivity;
 import com.example.superland.Adapter.PizzaAdapter;
-import com.example.superland.Domain.FoodDomain;
 import com.example.superland.Domain.PizzaDomain;
-import com.example.superland.Helper.ManagementCart;
 import com.example.superland.Interfaces.ItemClickListener;
 import com.example.superland.R;
 import com.example.superland.databinding.FragmentPizzaBinding;
