@@ -172,7 +172,8 @@
                 android:text="Оформить"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:elevation="10dp" />
         </LinearLayout>
     </ScrollView>
 
